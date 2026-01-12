@@ -1,39 +1,25 @@
-
+/* Mengatur font dasar dari Google Fonts */
 body {
     font-family: 'Inter', sans-serif;
-    scroll-behavior: smooth;
-    overflow-x: hidden; /* Mencegah scroll horizontal */
 }
 
-.skill-tag {
-    transition: all 0.2s ease-in-out;
+/* --- Animasi untuk Hero Section --- */
+/* Memberi efek muncul dan geser ke atas pada elemen hero */
+.hero-animate {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
 }
 
-.skill-tag:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
+/* Menambahkan delay animasi untuk setiap elemen di hero section */
+h1.hero-animate { animation-delay: 0.1s; }
+p.hero-animate:nth-of-type(1) { animation-delay: 0.2s; }
+p.hero-animate:nth-of-type(2) { animation-delay: 0.3s; }
+a.hero-animate { animation-delay: 0.4s; }
 
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -20px;
-    top: 5px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #3b82f6; /* Warna biru dari Tailwind */
-    border: 2px solid #ffffff;
-}
-
-
-/* --- CSS Animasi --- */
-
-/* Keyframes untuk animasi fade-in-up */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -41,77 +27,71 @@ body {
     }
 }
 
-/* Animasi untuk Hero Section saat halaman dimuat */
-.hero-animate {
-    /* Sembunyikan elemen sebelum animasi dimulai */
-    opacity: 0; 
-    /* Terapkan animasi */
-    animation: fadeInUp 0.8s ease-out forwards;
-}
-
-/* Beri jeda untuk setiap elemen di Hero Section */
-#hero h1 { animation-delay: 0.1s; }
-#hero p.text-xl { animation-delay: 0.3s; }
-#hero p.text-lg { animation-delay: 0.5s; }
-#hero a.bg-blue-600 { animation-delay: 0.7s; }
-
-/* Kelas untuk elemen yang akan dianimasikan saat scroll */
+/* --- Animasi Saat Scroll --- */
+/* State awal elemen sebelum terlihat di layar */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    transition-delay: 0.2s; /* Sedikit jeda sebelum animasi dimulai */
 }
 
-/* Kelas yang ditambahkan oleh JavaScript saat elemen terlihat */
+/* State akhir elemen setelah terlihat di layar */
 .animate-on-scroll.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Efek stagger (muncul satu per satu) untuk skill tags */
+/* --- Styling untuk Timeline di Experience & Education --- */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -38px; /* Sesuaikan agar pas dengan garis */
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #3b82f6; /* Warna biru */
+    border: 2px solid #bfdbfe; /* Border biru muda */
+}
+
+/* --- Styling untuk Animasi Skill Tags --- */
+/* Kondisi awal setiap skill tag (sebelum terlihat) */
+.skill-tag {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+/* Kondisi akhir setelah section skills terlihat */
 #skills.is-visible .skill-tag {
     opacity: 1;
     transform: translateY(0);
 }
 
+/* --- Styling untuk Image Gallery --- */
+.gallery-inner {
+    display: flex;
+    width: 100%; /* Pastikan kontainer flex mengambil lebar penuh */
+    height: 100%;
+    /* Ini akan dikelola oleh JS, tapi jaga sebagai fallback */
+    transform: translateX(0); 
+}
 
-/* --- Style untuk Fitur Gemini API --- */
+.gallery-inner img {
+    width: 100%; /* Setiap gambar mengambil 100% lebar kontainer */
+    height: 100%;
+    object-fit: contain; /* Memastikan seluruh gambar terlihat, tidak terpotong */
+    flex-shrink: 0; /* Penting agar gambar tidak menyusut */
+}
 
-/* Loading Spinner */
-#loading-spinner {
-    border: 4px solid rgba(0, 0, 0, 0.1);
-    width: 36px;
-    height: 36px;
+.gallery-dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
-    border-left-color: #4f46e5; /* Warna indigo */
-    animation: spin 1s ease infinite;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Tombol Generate */
-#generate-ideas-btn:disabled {
-    cursor: not-allowed;
-    opacity: 0.7;
-}
-
-/* Kartu Ide Proyek */
-.project-idea-card {
-    background-color: white;
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0;
-    animation: fadeInUp 0.5s ease-out forwards;
-}
-
-.project-idea-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+.gallery-dot.active {
+    background-color: #3b82f6; /* Warna biru untuk dot aktif */
 }
