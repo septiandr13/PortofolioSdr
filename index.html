@@ -7,12 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Menghubungkan ke file CSS eksternal -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Header & Navigasi -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-blue-600">SeptianDR</a>
@@ -20,6 +18,7 @@
                 <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300">Tentang Saya</a>
                 <a href="#skills" class="text-gray-600 hover:text-blue-600 transition duration-300">Keahlian</a>
                 <a href="#experience" class="text-gray-600 hover:text-blue-600 transition duration-300">Pengalaman</a>
+                <a href="#projects" class="text-gray-600 hover:text-blue-600 transition duration-300">Proyek</a>
                 <a href="#education" class="text-gray-600 hover:text-blue-600 transition duration-300">Pendidikan</a>
                 <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition duration-300">Hubungi Saya</a>
             </div>
@@ -29,11 +28,11 @@
                 </button>
             </div>
         </nav>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-100">Tentang Saya</a>
             <a href="#skills" class="block py-2 px-4 text-sm hover:bg-gray-100">Keahlian</a>
             <a href="#experience" class="block py-2 px-4 text-sm hover:bg-gray-100">Pengalaman</a>
+            <a href="#projects" class="block py-2 px-4 text-sm hover:bg-gray-100">Proyek</a>
             <a href="#education" class="block py-2 px-4 text-sm hover:bg-gray-100">Pendidikan</a>
             <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-100">Hubungi Saya</a>
         </div>
@@ -41,13 +40,12 @@
 
     <main class="container mx-auto px-6 py-12">
 
-        <!-- Hero Section -->
         <section id="hero" class="text-center py-20">
             <div class="max-w-4xl mx-auto">
                 <h1 class="hero-animate text-4xl md:text-6xl font-bold text-gray-900 mb-4 leading-tight">Septian Dwi Rahmanza</h1>
-                <p class="hero-animate text-xl md:text-2xl text-blue-600 font-semibold mb-6">IT Developer | .NET & Blazor Specialist</p>
+                <p class="hero-animate text-xl md:text-2xl text-blue-600 font-semibold mb-6">IT Developer | .NET, DevExpress & Blazor</p>
                 <p class="hero-animate text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-                    Pengembang perangkat lunak dengan fokus pada ekosistem .NET, berpengalaman dalam menciptakan aplikasi web modern, REST API, dan dashboard interaktif untuk mendukung digitalisasi proses bisnis.
+                    Pengembang perangkat lunak dengan fokus pada ekosistem .NET, berpengalaman dalam menciptakan aplikasi web modern, REST API, serta dashboard interaktif menggunakan DevExpress untuk mendukung digitalisasi proses bisnis.
                 </p>
                 <a href="#contact" class="hero-animate bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300">
                     Mari Terhubung
@@ -55,22 +53,20 @@
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="about" class="py-20 bg-white rounded-xl shadow-lg animate-on-scroll">
             <div class="max-w-4xl mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Tentang Saya</h2>
                 <div class="text-center">
                     <p class="text-gray-700 leading-relaxed text-lg">
-                        Saya adalah seorang IT Developer yang bersemangat dalam mengembangkan solusi digital. Saat ini, saya berkontribusi di PT Cakrawala Dinamika Energi, di mana saya fokus pada pengembangan platform audit internal "MyAudits" menggunakan ASP.NET Core dan Blazor.
+                        Saya adalah seorang IT Developer yang bersemangat dalam mengembangkan solusi digital. Sebelumnya, saya berkontribusi di PT Cakrawala Dinamika Energi dengan fokus pada pengembangan platform audit internal menggunakan ASP.NET Core, Blazor, serta DevExpress XAF dengan bahasa pemrograman C#.
                     </p>
                     <p class="mt-4 text-gray-700 leading-relaxed text-lg">
-                        Dengan latar belakang di bidang Informatika dari Universitas Ahmad Dahlan, saya memiliki pengalaman beragam mulai dari pengembangan web, game development dengan Unity, hingga manajemen data. Saya selalu berusaha mengimplementasikan *best practice* untuk menghasilkan kode yang efisien, *scalable*, dan mudah dipelihara.
+                        Dengan latar belakang di bidang Informatika dari Universitas Ahmad Dahlan, saya memiliki pengalaman beragam mulai dari pengembangan web, game development dengan Unity, hingga manajemen data. Saya selalu berusaha mengimplementasikan <i>best practice</i> untuk menghasilkan kode yang efisien, <i>scalable</i>, dan mudah dipelihara.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
         <section id="skills" class="py-20 animate-on-scroll">
             <div class="max-w-5xl mx-auto">
                 <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Keahlian Profesional</h2>
@@ -79,24 +75,22 @@
                     <span class="skill-tag bg-blue-100 text-blue-800 text-md font-medium px-4 py-2 rounded-full">ASP.NET Core</span>
                     <span class="skill-tag bg-blue-100 text-blue-800 text-md font-medium px-4 py-2 rounded-full">Blazor</span>
                     <span class="skill-tag bg-blue-100 text-blue-800 text-md font-medium px-4 py-2 rounded-full">SQL Server</span>
-                    <span class="skill-tag bg-blue-100 text-blue-800 text-md font-medium px-4 py-2 rounded-full">REST APIs</span>
+                    <span class="skill-tag bg-blue-100 text-blue-800 text-md font-medium px-4 py-2 rounded-full">DevExpress</span>
                     <span class="skill-tag bg-gray-100 text-gray-800 text-md font-medium px-4 py-2 rounded-full">Visual Basic .NET (VB.NET)</span>
                     <span class="skill-tag bg-gray-100 text-gray-800 text-md font-medium px-4 py-2 rounded-full">Unity</span>
                     <span class="skill-tag bg-gray-100 text-gray-800 text-md font-medium px-4 py-2 rounded-full">Tortoise SVN</span>
                     <span class="skill-tag bg-gray-100 text-gray-800 text-md font-medium px-4 py-2 rounded-full">Google Data Studio</span>
-                    <span class="skill-tag bg-gray-100 text-gray-800 text-md font-medium px-4 py-2 rounded-full">Oracle</span>
+                    <span class="skill-tag bg-gray-100 text-gray-800 text-md font-medium px-4 py-2 rounded-full">REST API</span>
                     <span class="skill-tag bg-gray-100 text-gray-800 text-md font-medium px-4 py-2 rounded-full">CSS</span>
-                    <span class="skill-tag bg-gray-100 text-gray-800 text-md font-medium px-4 py-2 rounded-full">C++</span>
+                    <span class="skill-tag bg-gray-100 text-gray-800 text-md font-medium px-4 py-2 rounded-full">Swagger</span>
                 </div>
             </div>
         </section>
 
-        <!-- Experience Section -->
         <section id="experience" class="py-20 bg-white rounded-xl shadow-lg animate-on-scroll">
             <div class="max-w-4xl mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-16 text-gray-900">Pengalaman Kerja</h2>
                 <div class="relative border-l-2 border-blue-200 pl-8">
-                    <!-- PT Cakrawala Dinamika Energi -->
                     <div class="mb-12 timeline-item">
                         <h3 class="text-xl font-bold text-gray-900">IT Developer</h3>
                         <p class="font-semibold text-blue-600 mb-1">PT Cakrawala Dinamika Energi · Full-time</p>
@@ -109,7 +103,6 @@
                             <li>Melakukan troubleshooting, bug fixing, dan maintenance rutin.</li>
                         </ul>
                     </div>
-                    <!-- Game Developer -->
                     <div class="mb-12 timeline-item">
                         <h3 class="text-xl font-bold text-gray-900">Game Developer</h3>
                         <p class="font-semibold text-blue-600 mb-1">Ahmad Dahlan University · Freelance</p>
@@ -119,7 +112,6 @@
                             <li>Membuat aset animasi 3D untuk kebutuhan Augmented Reality.</li>
                         </ul>
                     </div>
-                     <!-- PT. TELKOM AKSES -->
                     <div class="mb-12 timeline-item">
                         <h3 class="text-xl font-bold text-gray-900">Data Management</h3>
                         <p class="font-semibold text-blue-600 mb-1">PT. TELKOM AKSES · Internship</p>
@@ -134,12 +126,126 @@
             </div>
         </section>
 
-        <!-- Education Section -->
+        <section id="projects" class="py-20 animate-on-scroll">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Proyek Unggulan</h2>
+                
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row"><!-- Container utama proyek -->
+                    <div class="w-full h-80 md:h-auto md:w-1/2 bg-gray-200 relative">
+                        <div id="myaudits-gallery" class="project-gallery relative w-full h-full overflow-hidden">
+                            <div class="gallery-inner flex transition-transform duration-500 ease-in-out h-full">
+                                <img src="images/myaudits-dashboard.png" alt="MyAudits Main Dashboard" class="w-full h-full object-cover flex-shrink-0">
+                                <img src="images/myaudits-audit-monitoring.png" alt="MyAudits Audit Monitoring Dashboard" class="w-full h-full object-cover flex-shrink-0">
+                                <img src="images/myaudits-findings-monitoring.png" alt="MyAudits Findings Monitoring" class="w-full h-full object-cover flex-shrink-0">
+                                <img src="images/myaudits-audit-list.png" alt="MyAudits Audit List View" class="w-full h-full object-cover flex-shrink-0">
+                                <img src="images/myaudits-report-status.png" alt="MyAudits Report Status Finding" class="w-full h-full object-cover flex-shrink-0">
+                            </div>
+                            <button class="gallery-prev absolute top-1/2 left-4 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full focus:outline-none hover:bg-opacity-75 transition">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-next absolute top-1/2 right-4 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full focus:outline-none hover:bg-opacity-75 transition">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="gallery-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2"></div>
+                        </div>
+                    </div>
+
+                    <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-blue-100 text-blue-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Enterprise Solution</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-4">MyAudits</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Sistem manajemen audit internal terintegrasi yang dirancang untuk mendigitalisasi seluruh siklus audit, mulai dari perencanaan hingga pemantauan tindak lanjut temuan secara <i>real-time</i>. 
+                        </p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <p class="text-gray-700"><strong>Interactive Dashboards:</strong> Visualisasi data temuan (Major/Minor) menggunakan <i>Donut Charts</i> dan <i>Bar Charts</i> untuk memudahkan pengambilan keputusan manajemen.</p>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <p class="text-gray-700"><strong>Monitoring Status:</strong> Fitur pelacakan progres perbaikan temuan dengan status Open, On-Progress, dan Closed.</p>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <p class="text-gray-700"><strong>Reporting:</strong> Generasi laporan otomatis yang detail mencakup Audit Unit, Findings, dan Due Date.</p>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <p class="text-gray-700"><strong>API Integration:</strong> Pengembangan RESTful API untuk integrasi yang lancar dengan aplikasi seluler.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-md font-medium">ASP.NET Core</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-md font-medium">Blazor</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-md font-medium">MS SQL Server</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-md font-medium">RESTful API</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-md font-medium">C#</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-md font-medium">DevExpress</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-md font-medium">Swagger</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row mt-12 animate-on-scroll">
+                    <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center order-2 md:order-1">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Mining ERP Solution</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-4">MOP (Mining Operation Platform)</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Platform ERP komprehensif yang dirancang untuk mengelola seluruh aspek operasional pertambangan secara <i>end-to-end</i>, mulai dari perencanaan tambang hingga pemantauan produksi harian secara presisi.
+                        </p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <i class="fas fa-chart-line text-orange-500 mt-1 mr-3"></i>
+                                <p class="text-gray-700"><strong>Production Monitoring:</strong> Dashboard visual menggunakan grafik <i>gauge</i> untuk membandingkan target (Plan) vs realisasi (Actual) pada aktivitas OB Removal dan Coal Getting.</p>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-calendar-check text-orange-500 mt-1 mr-3"></i>
+                                <p class="text-gray-700"><strong>Daily Planning:</strong> Manajemen perencanaan harian yang terintegrasi dengan berbagai entitas perusahaan untuk sinkronisasi target tambang.</p>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-truck-monster text-orange-500 mt-1 mr-3"></i>
+                                <p class="text-gray-700"><strong>Fleet Management:</strong> Pemantauan status unit alat berat (Digger, Hauler, Support) dan pencatatan <i>Equipment Time Sheet</i> yang akurat.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-md font-medium">ASP.NET</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-md font-medium">Enterprise ERP</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-md font-medium">Operational Analytics</span>
+                            <span class="px-3 py-1 bg-gray-100 text-orange-600 text-sm rounded-md font-medium font-bold">Real-time Data</span>
+                        </div>
+                    </div>
+
+                    <div class="w-full h-80 md:h-auto md:w-1/2 bg-gray-200 order-1 md:order-2 relative">
+                        <div id="mop-gallery" class="project-gallery relative w-full h-full overflow-hidden">
+                            <div class="gallery-inner flex transition-transform duration-500 ease-in-out h-full">
+                                <img src="images/mop-production-dashboard.png" alt="MOP Production Dashboard" class="w-full h-full object-cover flex-shrink-0">
+                                <img src="images/mop-dashboard-main.png" alt="MOP General Dashboard" class="w-full h-full object-cover flex-shrink-0">
+                                <img src="images/mop-daily-plan.png" alt="MOP Daily Planning" class="w-full h-full object-cover flex-shrink-0">
+                            </div>
+                            <button class="gallery-prev absolute top-1/2 left-4 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-next absolute top-1/2 right-4 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="gallery-dots absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="education" class="py-20 animate-on-scroll">
             <div class="max-w-4xl mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-16 text-gray-900">Riwayat Pendidikan</h2>
                 <div class="relative border-l-2 border-blue-200 pl-8">
-                    <!-- Universitas Ahmad Dahlan -->
                     <div class="timeline-item">
                         <h3 class="text-xl font-bold text-gray-900">Ahmad Dahlan University Yogyakarta Indonesia</h3>
                         <p class="font-semibold text-blue-600 mb-1">Gelar Sarjana, Informatika</p>
@@ -150,21 +256,20 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="py-20 animate-on-scroll">
             <div class="max-w-2xl mx-auto text-center">
                 <h2 class="text-3xl font-bold mb-4 text-gray-900">Tertarik Bekerja Sama?</h2>
                 <p class="text-lg text-gray-600 mb-8">
                     Saya selalu terbuka untuk diskusi mengenai proyek baru, peluang kolaborasi, atau sekadar bertukar pikiran tentang teknologi. Jangan ragu untuk menghubungi saya.
                 </p>
-                <a href="mailto:septiandwicahyo13@gmail.com" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300 mb-8">
+                <a href="mailto:septiandwirahmanza@gmail.com" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300 mb-8">
                     <i class="fas fa-envelope mr-2"></i> Kirim Email
                 </a>
                 <div class="flex justify-center space-x-6">
                     <a href="https://www.linkedin.com/in/septiandr13/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-700 transition duration-300">
                         <i class="fab fa-linkedin fa-2x"></i>
                     </a>
-                    <a href="https://github.com/septiandc" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-900 transition duration-300">
+                    <a href="https://github.com/septiandr13" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-900 transition duration-300">
                         <i class="fab fa-github fa-2x"></i>
                     </a>
                 </div>
@@ -173,62 +278,13 @@
 
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-6">
         <div class="container mx-auto px-6 text-center">
             <p>&copy; 2025 Septian Dwi Rahmanza. Dibuat dengan penuh semangat.</p>
         </div>
     </footer>
 
-    <script>
-        // --- Script untuk Mobile Menu ---
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.querySelectorAll('#mobile-menu a, .hidden.md\\:flex a');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
-
-        // --- Script untuk Animasi On Scroll ---
-        document.addEventListener("DOMContentLoaded", () => {
-            const observerOptions = {
-                root: null, // Menggunakan viewport sebagai root
-                rootMargin: '0px',
-                threshold: 0.1 // Memicu saat 10% elemen terlihat
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        
-                        // Khusus untuk skill tags, tambahkan delay satu per satu
-                        if (entry.target.id === 'skills') {
-                            const skillTags = entry.target.querySelectorAll('.skill-tag');
-                            skillTags.forEach((tag, index) => {
-                                tag.style.transitionDelay = `${index * 0.05}s`;
-                            });
-                        }
-                        
-                        observer.unobserve(entry.target); // Hentikan observasi setelah animasi berjalan
-                    }
-                });
-            }, observerOptions);
-
-            // Amati semua elemen dengan kelas .animate-on-scroll
-            const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
-            elementsToAnimate.forEach(el => observer.observe(el));
-        });
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
